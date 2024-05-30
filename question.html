@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function final() {
+      const form = document.getElementById("quizform");
+      const inputs = form.querySelectorAll("input[type='radio']:checked");
+      let score = 0;
+
+      inputs.forEach(input => {
+        if (input.value === "c") {
+          score += 2;
+        }
+      }
+      );
+
+      const resultElement = document.getElementById("res");
+      resultElement.textContent = `You scored ${score} out of 20.`;
+      form.reset();
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <center>
+    <div class="header">
+      <p>C++ MCQ TEST</p>
+    </div>
+    <hr>
+    <div>
+      <p>Note:- 2 marks for every <b>correct</b> answer and 0 for every <b>incorrect</b></b></p>
+    </div>
+  </center>
+
+  <div class="paper">
+    <form id="quizform">
+      <ol>
+        <li>
+          <h3>Question 1</h3>
+          <p>Who invented C++?</p>
+          <label> Ritchie <input type="radio" name="one" value="1.1"></label><br>
+          <label>Ken Thompson<input type="radio" name="one" value="1.2"></label><br>
+          <label>Brian Kernighan<input type="radio" name="one" value="1.3"></label><br>
+          <label> Bjarne Stroustrup<input type="radio" name="one" value="c"></label>
+        </li>
+        <li>
+          <h3>Question 2</h3>
+          <p> Which of the following is the correct syntax of including a user defined header files in C++?</p>
+          <label> #include [userdefined]<input type="radio" name="two" value="2.1"></label><br>
+          <label> #include “userdefined”<input type="radio" name="two" value="c"></label><br>
+          <label> #include < userdefined.h> <input type="radio" name="two" value="2.3"></label><br>
+          <label> #include < userdefined> <input type="radio" name="two" value="2.4"></label>
+        </li>
+        <li>
+          <h3>Question 3</h3>
+          <p>Which of the following is not a type of Constructor in C++?</p>
+          <label> Default constructor<input type="radio" name="three" value="3.1"></label><br>
+          <label> Parameterized constructor<input type="radio" name="three" value="3.2"></label><br>
+          <label> Copy constructor<input type="radio" name="three" value="3.3"></label><br>
+          <label> Friend constructor<input type="radio" name="three" value="c"></label>
+        </li>
+        <li>
+          <h3>Question 4</h3>
+          <p> What is virtual inheritance in C++?</p>
+          <label> C++ technique to enhance multiple inheritance<input type="radio" name="four" value="4.1"></label><br>
+          <label> C++ technique to ensure that a private member of the base class can be accessed somehow<input
+              type="radio" name="four" value="4.2"></label><br>
+          <label> C++ technique to avovalue multiple inheritances of classes<input type="radio" name="four"
+              value="4.3"></label><br>
+          <label> C++ technique to avovalue multiple copies of the base class into children/derived class<input
+              type="radio" name="four" value="c"></label>
+        </li>
+        <li>
+          <h3>Question 5</h3>
+          <p> int *ptr = NULL;</p>
+          delete ptr;<br>
+          <label> The program is not semantically correct<input type="radio" name="five" value="5.1"></label><br>
+          <label> The program is compiled and executed successfully<input type="radio" name="five"
+              value="c"></label><br>
+          <label> The program gives a compile-time error<input type="radio" name="five" value="5.3"></label><br>
+          <label> The program compiled successfully but throws an error during run-time<input type="radio" name="five"
+              value="5.4"></label>
+        </li>
+        <li>
+          <h3>Question 6</h3>
+          <p> What is the difference between delete and delete[] in C++?</p>
+          <label> delete is syntactically correct but delete[] is wrong and hence will give an error if used in any
+            case<input type="radio" name="six" value="6.1"></label><br>
+          <label> delete is used to delete normal objects whereas delete[] is used to pointer objects<input type="radio"
+              name="six" value="6.2"></label><br>
+          <label> delete is a keyword whereas delete[] is an valueentifier<input type="radio" name="six"
+              value="6.3"></label><br>
+          <label> delete is used to delete single object whereas delete[] is used to multiple(array/pointer of)
+            objects<input type="radio" name="six" value="c"></label>
+        </li>
+        <li>
+          <h3>Question 7</h3>
+          <p> Which of the following is correct about this pointer in C++?</p>
+          <label> this pointer is passed as a hvalueden argument in all static variables of a class<input type="radio"
+              name="seven" value="7.1"></label><br>
+          <label> this pointer is passed as a hvalueden argument in all the functions of a class<input type="radio"
+              name="seven" value="7.2"></label><br>
+          <label> this pointer is passed as a hvalueden argument in all non-static functions of a class<input
+              type="radio" name="seven" value="7.3"></label><br>
+          <label> this pointer is passed as a hvalueden argument in all static functions of a class<input type="radio"
+              name="seven" value="c"></label>
+        </li>
+        <li>
+          <h3>Question 8</h3>
+          <p> What is the use of the indentation in c++?</p>
+          <label> r distinguishes between comments and inner data<input type="radio" name="eight"
+              value="8.1"></label><br>
+          <label> distinguishes between comments and outer data<input type="radio" name="eigth" value="8.2"></label><br>
+          <label> distinguishes between comments and code<input type="radio" name="eigth" value="8.3"></label><br>
+          <label> r distinguishes between comments and outer data<input type="radio" name="eigth" value="c"></label>
+        </li>
+        <li>
+          <h3>Question 9</h3>
+          <p> Which is more effective while calling the C++ functions?</p>
+          <label> call by object<input type="radio" name="nine" value="9.1"></label><br>
+          <label> call by pointer<input type="radio" name="nine" value="9.2"></label><br>
+          <label> call by value<input type="radio" name="nine" value="9.3"></label><br>
+          <label> call by reference<input type="radio" name="nine" value="c"></label>
+        </li>
+        <li>
+          <h3>Question 10</h3>
+          <p>The C++ code which causes abnormal termination/behaviour of a program should be written under ___ block.
+          </p>
+          <label> catch<input type="radio" name="ten" value="10.1"></label><br>
+          <label> throw<input type="radio" name="ten" value="10.2"></label><br>
+          <label> try<input type="radio" name="ten" value="c"></label><br>
+          <label> finally<input type="radio" name="ten" value="10.4"></label><br>
+        </li>
+      </ol>
+      <button type="button" onclick="final()">Submit</button>
+    </form>
+    <center>
+      <p id="res"></p>
+    </center>
+  </div>
+</body>
+
+</html>
